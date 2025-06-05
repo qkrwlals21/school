@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="../resources/css/template.css">
   <link rel="stylesheet" href="../resources/css/common.css">
   <link rel="stylesheet" href="../resources/css/style.css">
+  
 
   <style>
     .textset-tit {
@@ -76,65 +77,101 @@
       color: rgb(255, 255, 255) !important;
     }
   </style>
+  
 </head>
 <body>
+
+    <script src="https://cdn.botpress.cloud/webchat/v2.5/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2025/05/23/06/20250523060103-EP0U7751.js"></script>
+    
   <meta charset="UTF-8">
   <title>팝업 예시</title>
-  <style>
-    /* 팝업 배경 */
-    #popup {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      z-index: 1000;
-    }
+<style>
+  /* 팝업 배경 */
+  #popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+  }
 
-    /* 팝업 내용 */
-    #popup-content {
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      background: white;
-      padding: 10px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
+  /* 팝업 내용 */
+  #popup-content {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent; /* 배경 제거 */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    position: relative;
+    display: inline-block;
+  }
 
-    /* 닫기 버튼 */
-    #popup-close {
-      display: block;
-      text-align: right;
-      margin-top: 10px;
-    }
-  </style>
-  <div id="popup">
-    <div id="popup-content">
-      <a href="initial2.html" target="_blank">
-        <img src="" alt="팝업 이미지" style="max-width:100%;">
+  /* 이미지 wrapper */
+  .image-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .image-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  /* 닫기 버튼 */
+  #popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  #popup-close:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+</style>
+
+<div id="popup">
+  <div id="popup-content">
+    <div class="image-wrapper">
+      <!-- 닫기 버튼 이미지 위에 고정 -->
+      <button id="popup-close" onclick="closePopup()">×</button>
+
+      <!-- 팝업 이미지 -->
+      <a href="tkdydqjq.html">
+        <img src="../resources/images/main-popup.png" alt="팝업 이미지">
       </a>
-      <div id="popup-close">
-        <button onclick="closePopup()">닫기</button>
-      </div>
     </div>
   </div>
-  <script>
-    // 팝업 열기
-    function showPopup() {
-      document.getElementById('popup').style.display = 'block';
-    }
-  
-    // 팝업 닫기
-    function closePopup() {
-      document.getElementById('popup').style.display = 'none';
-    }
-  
-    // 페이지 로드 시 팝업 자동 표시
-    window.onload = function() {
-      showPopup();
-    };
-  </script>
+</div>
+
+<script>
+  function showPopup() {
+    document.getElementById('popup').style.display = 'block';
+  }
+
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+
+  window.onload = function() {
+    showPopup();
+  };
+</script>
   <!-- [S]basic-N1 -->
   <header class="basic-N1" data-bid="aGM3pZiXs3" id="">
     <div class="header-inner">
@@ -219,7 +256,7 @@
               <div class="contents-slide-group container-md">
                 <div class="textset textset-visual">
                   <h2 class="textset-tit">In Science</h2>
-                  <p class="textset-desc">“ In Science, We Innovation! “</p> 
+                  <p class="textset-desc">화원고등학교의 전통있고 유서깊은 유일 이과 동아리</p> 
                 </div>
                 <a class="btnset btnset-round" href="javascript:void(0)">자세히보기</a>
               </div>
@@ -273,35 +310,35 @@
         </div>
       </div>
     </div>
-    <!-- [E]basic-N5 -->
+    
+    
     <!-- [S]basic-N6 -->
     <div class="basic-N6" data-bid="fum3PzIXZQ" id="">
       <div class="contents-container container-md">
         <div class="textset">
           <h2 class="textset-tin">
-            인싸(In science)?
+            인싸에 가면 좋은점이 뭐죠?
           </h2>
           <p class="textset-dest">
-            화원고에 단 '1곳' 밖에 없는 이과 동아리
+            dfdf
           </p>
         </div>
       </div>
     </div>
     <!-- [E]basic-N6 -->
     <!-- [S]basic-N7 -->
+     <div>
+      <img src="../resources/images/cnldjq.png" alt="취업률"style="display: block; margin: 0 auto;">
+     </div>
     <div class="basic-N7" data-bid="lfM3Pziy24" id="">
       <div class="contents-container">
         <div class="videoset container-md">
-          <video class="videoset-video">
-            <source src="../resources/videos/video.mp4">
+          <p class="textset-dest">
+            dfdf
+          </p>
+          <video class="videoset-video" controls autoplay muted loop>
+            <source src="../resources/images/KakaoTalk_20250513_192404382.mp4"">
           </video>
-          <div class="videoset-body">
-            <section id="about">
-              <button class="videoset-play">
-               <img src="../resources/icons/ico_video_play.svg"  alt="플레이버튼">
-              </button>
-            </section>
-          </div>
         </div>
         <div class="contents-bottom">
           </div>
