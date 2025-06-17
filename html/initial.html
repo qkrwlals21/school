@@ -81,8 +81,8 @@
 </head>
 <body>
 
-    <script src="https://cdn.botpress.cloud/webchat/v2.5/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2025/05/23/06/20250523060103-EP0U7751.js"></script>
+<script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js" defer></script>
+<script src="https://files.bpcontent.cloud/2025/06/17/01/20250617014022-O3UA1JJ5.js" defer></script>
     
   <meta charset="UTF-8">
   <title>팝업 예시</title>
@@ -154,7 +154,61 @@
       <!-- 팝업 이미지 -->
       <a href="tkdydqjq.html">
         <img src="../resources/images/main-popup.png" alt="팝업 이미지">
+        
       </a>
+      <!-- 이미지 아래에 버튼 추가 -->
+<div style="text-align: center; margin-top: 10px;">
+  <button id="popup-hide-today" onclick="hideToday()">오늘 하루 보지 않기</button>
+</div>
+<script>
+  function setCookie(name, value, hours) {
+    const now = new Date();
+    now.setTime(now.getTime() + (hours * 60 * 60 * 1000));
+    document.cookie = name + "=" + value + ";expires=" + now.toUTCString() + ";path=/";
+  }
+
+  function getCookie(name) {
+    const value = "; " + document.cookie;
+    const parts = value.split("; " + name + "=");
+    if (parts.length === 2) return parts.pop().split(";").shift();
+  }
+
+  function showPopup() {
+    if (!getCookie("hidePopupToday")) {
+      document.getElementById('popup').style.display = 'block';
+    }
+  }
+
+  function hideToday() {
+    setCookie("hidePopupToday", "true", 24); // 24시간 동안 저장
+    closePopup();
+  }
+
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+
+  window.onload = function() {
+    showPopup();
+  };
+</script>
+<style>
+  #popup-hide-today {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ffffffcc;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#popup-hide-today:hover {
+  background-color: #eee;
+}
+
+</style>
     </div>
   </div>
 </div>
@@ -189,7 +243,7 @@
           </div>
           <ul class="header-gnblist">
             <li class="header-gnbitem">
-              <a class="header-gnblink" href="https://hn-hwawon.hs.jne.kr/hn-hwawon_hs/main.do?sysId=hn-hwawon_hs">
+              <a class="header-gnblink" href="https://youtu.be/vb8Wc4b9Zvs?si=sCMSm4zNoIGLl63X">
                 <span>학교소개</span>
               </a>
             </li>
@@ -204,8 +258,8 @@
               </a>
             </li>
             <li class="header-gnbitem">
-              <a class="header-gnblink" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQHefGZWGpm1TsilY9tePusIW0E0gQtkRwOQ&s">
-                <span> 양치해</span>
+              <a class="header-gnblink" href="tkdydqjq.html">
+                <span>사용법알아보기</span>
               </a>
             </li>
             <li class="header-gnbitem">
@@ -261,23 +315,19 @@
                 <a class="btnset btnset-round" href="javascript:void(0)">자세히보기</a>
               </div>
             </div>
-            <div class="swiper-slide">
-              <video class="contents-backimg img-pc video-dimmed" autoplay loop muted playsinline>
-                <source src="../resources/images/KakaoTalk_20250513_192404382.mp4" type="video/mp4">
-              </video> <!-- 닫힘 -->
             
-              <video class="contents-backimg img-mobile video-dimmed" autoplay loop muted playsinline>
-                <source src="../resources/images/KakaoTalk_20250513_192404382.mp4" type="video/mp4">
-              </video> <!-- 닫힘 -->
-            
+           <div class="swiper-slide">
+              <img class="contents-backimg img-pc" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAADFBMVEUAAAABFCMACxQAAwSg3VkGAAAAUUlEQVR4nO3OAQ0AMAgDMMb9e74MSGgVtGqJJP2mEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHDTB+3FAAnlWfWJAAAAAElFTkSuQmCC" alt="PC 배너 이미지">
+              <img class="contents-backimg img-mobile" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAADFBMVEUAAAABFCMACxQAAwSg3VkGAAAAUUlEQVR4nO3OAQ0AMAgDMMb9e74MSGgVtGqJJP2mEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHDTB+3FAAnlWfWJAAAAAElFTkSuQmCC" alt="모바일 배너 이미지">
               <div class="contents-slide-group container-md">
                 <div class="textset textset-visual">
                   <h2 class="textset-tit">In Science</h2>
-                  <p class="textset-desc">“ In Science, We Innovation! “</p>
+                  <p class="textset-desc">화원고등학교의 전통있고 유서깊은 유일 이과 동아리</p> 
                 </div>
                 <a class="btnset btnset-round" href="javascript:void(0)">자세히보기</a>
               </div>
             </div>
+
             <div class="swiper-slide">
               <video class="contents-backimg img-pc video-dimmed" autoplay loop muted playsinline>
                 <source src="../resources/images/KakaoTalk_20250509_221426128.mp4" type="video/mp4">
@@ -290,7 +340,7 @@
               <div class="contents-slide-group container-md">
                 <div class="textset textset-visual">
                   <h2 class="textset-tit">In Science</h2>
-                  <p class="textset-desc">“ In Science, We Innovation! “</p>
+                  <p class="textset-desc">화원고등학교의 전통있고 유서깊은 유일 이과 동아리</p>
                 </div>
                 <a class="btnset btnset-round" href="javascript:void(0)">자세히보기</a>
               </div>
@@ -320,38 +370,19 @@
             인싸에 가면 좋은점이 뭐죠?
           </h2>
           <p class="textset-dest">
-            dfdf
+            --------------------------------------------------------------------------------------------------------------
           </p>
         </div>
       </div>
     </div>
-    <!-- [E]basic-N6 -->
-    <!-- [S]basic-N7 -->
-     <div>
-      <img src="../resources/images/cnldjq.png" alt="취업률"style="display: block; margin: 0 auto;">
-     </div>
-    <div class="basic-N7" data-bid="lfM3Pziy24" id="">
-      <div class="contents-container">
-        <div class="videoset container-md">
-          <p class="textset-dest">
-            dfdf
-          </p>
-          <video class="videoset-video" controls autoplay muted loop>
-            <source src="../resources/images/KakaoTalk_20250513_192404382.mp4"">
-          </video>
-        </div>
-        <div class="contents-bottom">
-          </div>
-        </div>
-      </div>
-    </div>
+
     <!-- [E]basic-N7 -->
     <!-- [S]basic-N8 -->
     <div class="basic-N8" data-bid="vSm3PZiy5Y" id="">
       <div class="contents-inner">
         <div class="contents-container container-md">
           <div class="textset">
-              <h2 class="textset-tin">아싸 (Out Science) 라면?</h2>
+              <h2 class="textset-tin">아싸 (Out Science) 여도 됩니다!</h2>
               <p class="cardset-desc"> 꼭 자연과학과 지망생이 아니여도 됩니다</p>
           </div>
           <div class="contents-group">
@@ -361,7 +392,7 @@
               </figure>
                 <div class="cardset-body">
                   <h5 class="cardset-tit">공학</h5>
-                  <p class="cardset-desc">뭐라구 컴공? 화공? 인싸 안오고 뭐하니??</p>
+                  <p class="cardset-desc"></p>
                 </div>        
             </div>
             <div class="cardset">
@@ -370,7 +401,7 @@
               </figure>
               <div class="cardset-body">
                 <h5 class="cardset-tit">환경</h5>
-                <p class="cardset-desc">추천좀</p>
+                <p class="cardset-desc"></p>
               </div>
             </div>
           </div>
@@ -435,24 +466,24 @@
             <div class="contents-container container-md">
               <div class="textset">
                   <h2 class="textset-tin">올해에는 어떤 활동을 하나요?</h2>
-                  <p class="cardset-desc"> 꼭 자연과학과 지망생이 아니여도 됩니다</p>
+            
               </div>
               <div class="contents-group">
                 <div class="cardset">
                   <figure class="cardset-figure">
-                    <img class="cardset-img" src="https://lh5.googleusercontent.com/proxy/0ptch4k3c49d5Ut9wycOkSaC6FDY-sO5xG8quMu1aIX0QrZkfslkyGxXY8l-qdQOJW0Ns33vKkSj5GkVrorpRXkxzyK5bHcAnUHETQfAKCZ6" alt="이미지">
+                    <img class="cardset-img" src="../resources/images/KakaoTalk_20250617_114538127.jpg" alt="이미지">
                   </figure>
                     <div class="cardset-body">
-                      <h5 class="cardset-tit">공학</h5>
-                      <p class="cardset-desc">뭐라구 컴공? 화공? 인싸 안오고 뭐하니??</p>
+                      <h5 class="cardset-tit">온도차로 인한 밀도차이 관찰실험</h5>
+                      <p class="cardset-desc">ㄴㅇ</p>
                     </div>        
                 </div>
                 <div class="cardset">
                   <figure class="cardset-figure">
-                    <img class="cardset-img" src="https://mblogthumb-phinf.pstatic.net/MjAyMzA2MTZfMTgg/MDAxNjg2ODc5NjgwNDk0.qn0_inBJam35jAxI3yPi1L5L3O7CMwBQJfRlnvf3BGAg.djyctxwHiRe0a0EmSZMwsV9l0MbC00tENNM5K82dpMYg.JPEG.gnfeel/CK_tica1010007351.jpg?type=w800" alt="이미지">
+                    <img class="cardset-img" src="../resources/images/KakaoTalk_20250617_115900914_01.jpg" alt="이미지">
                   </figure>
                   <div class="cardset-body">
-                    <h5 class="cardset-tit">환경</h5>
+                    <h5 class="cardset-tit">압전소자를 이용한 물정화 실험</h5>
                     <p class="cardset-desc">
                       추천좀
                     </p>
@@ -479,7 +510,7 @@
                     박지민
                   </p>
                   <span class="cardset-txt">
-                    instagram : _jimin0721
+                  
                   </span>
                 </div>
               </a>
@@ -570,8 +601,8 @@
               전라남도 해남군 화원면 신평리길 25-19
             </p>
             <p>
-              <span>T. 070-8872-8874</span>
-              <span>E. help@openfield.co.kr</span>
+              <span>T. 061-112</span>
+              <span>E. tkffuwnj@wpqkf</span>
             </p>
           </div>
           <div class="footer-txt">
